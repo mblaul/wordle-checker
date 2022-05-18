@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+  --color-success: rgb(41, 161, 41);
+  --color-failure: rgb(140, 35, 35);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 2rem 1rem;
+  letter-spacing: -0.5px;
+  font: 3rem Arial, sans-serif;
+  font-weight: 700;
+  color: white;
+  background-color: #212121;
+}
+
+header {
+  justify-self: flex-start;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+small {
+  display: block;
+  padding: 1rem;
+  font: 1.2rem Arial, sans-serif;
+  color: rgb(52, 52, 52);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.826);
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+small.hidden {
+  display: none;
+}
+
+small.used {
+  color: var(--color-failure);
+}
+
+small.not-used-yet {
+  color: var(--color-success);
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  font: 3rem bold Arial, sans-serif;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  border: 3px solid #161616;
+  border-radius: 0.5rem;
+}
+
+input.used {
+  background-color: var(--color-failure);
+  color: white;
+}
+
+input.not-used-yet {
+  background-color: var(--color-success);
+  color: white;
+}
+
+footer {
+  display: flex;
+  place-content: center;
+}
+
+a {
+  margin: 3rem;
+  display: block;
+  text-align: center;
+  font: 1.2rem Arial, sans-serif;
+  font-weight: 400;
+}

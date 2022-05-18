@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Check to see if your starter word has been used before"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Wordle Checker - See if your starter has been used before</title>
+  </head>
+  <body>
+    <main>
+      <header>Has your Wordle starter been used before?</header>
+      <article>
+        <small id="word-info" class="hidden"></small>
+        <input
+          id="word"
+          type="text"
+          name="word"
+          maxlength="5"
+          onkeydown="return /[a-z]/i.test(event.key)"
+          onkeyup="checkWord()"
+        />
+      </article>
+    </main>
+    <footer>
+      <a
+        href="https://github.com/mblaul/wordle-checker"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+    </footer>
+  </body>
+  <script src="wordChecker.js"></script>
+</html>
